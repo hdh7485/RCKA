@@ -1,8 +1,8 @@
 /*
  * SOCCER.h
  *
- * Created: 2015-08-06 오후 1:59:58
- * Author: JEON HAKYEONG (전하경)
+ * Created: 2015-08-06 ?�후 1:59:58
+ * Author: JEON HAKYEONG (?�하�?
  *
  * History
  *
@@ -24,6 +24,9 @@
  *
  * 2016-06-07
  *	Change L_IR2 and S_IR2 (change position S_IR2 to front)
+ *
+ * 2017-03-11
+ *	Change some register and resistance.
  *
  */ 
 
@@ -312,14 +315,14 @@ void init_devices(void)
 
 
 /*
-// 입력으로 들어오는 채널의 ADC를 스타트 시킨다.
+// ?�력?�로 ?�어?�는 채널??ADC�??��????�킨??
 void startConvertion(unsigned char ch)
 {
 	ADCSRA = ADCSRA & 0x3f;
 	ADCSRA = ADCSRA | 0xc0;
 }
 
-// startConvertion() 후에 수행되며 컨터팅 된 값을 리턴한다.
+// startConvertion() ?�에 ?�행?�며 컨터????값을 리턴?�다.
 unsigned char readConvertData(void)
 {
 	volatile unsigned char temp;
@@ -338,7 +341,7 @@ void Lcd_Chk_Busy()
 	char busy = 1;
 	char in;		
 	PORTB = 0x0B;
-	DDRB = 0x0B;	//상위 4비트만 출력
+	DDRB = 0x0B;	//?�위 4비트�?출력
 	PORTB=0x02;
 
 	while(busy==1)
@@ -354,7 +357,7 @@ void Lcd_Chk_Busy()
 		delay20us(4);
 	}
 	PORTB = 0xFB;
-	DDRB = 0xFB;	//상위 4비트만 출력	
+	DDRB = 0xFB;	//?�위 4비트�?출력	
 */
 }
 
